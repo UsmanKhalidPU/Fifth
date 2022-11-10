@@ -10,7 +10,7 @@ public class SetImplimentation {
         StudentSet.add("Ali");
         StudentSet.add("Umer");
         StudentSet.add("Arshad");
-        StudentSet.get
+       // StudentSet.get
         // Printing elements of HashSet object
         System.out.println(StudentSet);
         System.out.println("Set Has Value: " + StudentSet.contains("Umer"));
