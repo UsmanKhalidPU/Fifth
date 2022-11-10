@@ -9,5 +9,16 @@ public class ArrayListImplimentation {
         Student.add("Ali");
         Student.add("Umer");
 
+        System.out.println(Student.get(2));
+        Student.set(2,"Shahab");
+        System.out.println(Student.get(2));
+
+        System.out.println(Student.size());
+        Student.remove(2);
+        System.out.println(Student.size());
+        //System.out.println(Student.get(2));
+        Student.clear();
+        System.out.println(Student.size());
+
     }
 }
