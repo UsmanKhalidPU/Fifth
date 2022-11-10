@@ -8,9 +8,6 @@ public class ArrayListImplimentation {
         Student.add("Khalid");
         Student.add("Ali");
         Student.add("Umer");
-        Student.add("Usman");
-        Student.add("Khalid");
-        Student.add("Ali");
-        Student.add("Umer");
+
     }
 }
