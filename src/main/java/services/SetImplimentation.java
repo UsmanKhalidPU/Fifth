@@ -14,5 +14,15 @@ public class SetImplimentation {
         // Printing elements of HashSet object
         System.out.println(StudentSet);
         System.out.println("Set Has Value: " + StudentSet.contains("Umer"));
+
+        StudentSet.add("Usman_");
+        StudentSet.add("Khalid_");
+        StudentSet.add("Ali_");
+        StudentSet.add("Umer_");
+        StudentSet.add("Arshad_");
+        // StudentSet.get
+        // Printing elements of HashSet object
+        System.out.println(StudentSet);
+        System.out.println("Set Has Value: " + StudentSet.contains("Umer_"));
     }
 }
