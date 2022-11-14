@@ -1,4 +1,5 @@
 package services;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,9 +14,16 @@ public class Streams<I extends Number> {
         Stream <Integer> S = RollNo.stream();
         List<Integer> NewList = S.filter(i-> i%2==0).collect(Collectors.toList());
         System.out.println(NewList);
-
         //same working as above
         List<Integer> NewList2 = RollNo.stream().filter(i-> i%2==0).collect(Collectors.toList());
         System.out.println(NewList2);
+
+        List<Integer> NewList3 = RollNo.stream().map(i->i*i).collect(Collectors.toList());
+        System.out.println(NewList3);
+
+
+        List<String> Student = Arrays.asList("Usman", "Khalid", "Ali", "Umer", "Arshad");
+        List<String> SList = Student.stream().filter(i-> i.startsWith("U")).collect(Collectors.toList());
+        System.out.println(SList);
     }
 }
