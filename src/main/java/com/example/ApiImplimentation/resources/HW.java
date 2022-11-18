@@ -1,5 +1,6 @@
 package com.example.ApiImplimentation.resources;
 
+import com.example.ApiImplimentation.domain.ApiImplimentation;
 import com.google.gson.Gson;
 
 import javax.ws.rs.GET;

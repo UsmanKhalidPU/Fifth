@@ -1,4 +1,4 @@
-package com.example.ApiImplimentation.resources;
+package com.example.ApiImplimentation.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
