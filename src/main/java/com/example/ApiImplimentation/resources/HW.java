@@ -1,6 +1,5 @@
 package com.example.ApiImplimentation.resources;
 
-
 import com.google.gson.Gson;
 
 import javax.ws.rs.GET;
@@ -19,7 +18,6 @@ public class HW {
 
         Gson g = new Gson();
         String J = g.toJson(APIIMP);
-        System.out.println(J);
         return Response.ok(J).build();
     }
 }
