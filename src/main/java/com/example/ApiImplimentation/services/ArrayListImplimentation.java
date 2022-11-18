@@ -1,9 +1,9 @@
-package services;
-import java.util.LinkedList;
+package com.example.ApiImplimentation.services;
+import java.util.ArrayList;
 
-public class LLImplimentation {
+public class ArrayListImplimentation {
     public static void main(String[] args) {
-        LinkedList<String> Student = new LinkedList<String>();
+        ArrayList<String> Student = new ArrayList<String>();
         Student.add("Usman");
         Student.add("Khalid");
         Student.add("Ali");
@@ -20,9 +20,5 @@ public class LLImplimentation {
         Student.clear();
         System.out.println(Student.size());
 
-        Student.addFirst("Sara");
-        System.out.println(Student.get(0));
-        System.out.println(Student.size());
     }
-
 }
