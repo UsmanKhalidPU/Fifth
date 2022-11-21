@@ -14,6 +14,8 @@ public class DbApi {
         Connection C = null;
 
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+
             C = DriverManager.getConnection("jdbc:mysql://localhost:3306/hktemp", "root", "root");
             Statement S = C.createStatement();
 
@@ -32,7 +34,7 @@ public class DbApi {
             pst.setInt(3, Hk_ID);
 
             Integer K = pst.executeUpdate();
-            System.out.println("No of record inserted: " + K);
+            System.out.println("No of records Inserted : " + K);
         }
 
         catch (Exception e) {

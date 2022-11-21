@@ -25,4 +25,15 @@ public class DBpojo {
         return Hk_ID;
     }
 
+    public void setHkName(String hkName) {
+        HkName = hkName;
+    }
+
+    public void setHkLocation(String hkLocation) {
+        HkLocation = hkLocation;
+    }
+
+    public void setHk_ID(Integer hk_ID) {
+        Hk_ID = hk_ID;
+    }
 }

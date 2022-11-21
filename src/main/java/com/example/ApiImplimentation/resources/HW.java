@@ -3,11 +3,10 @@ package com.example.ApiImplimentation.resources;
 import com.example.ApiImplimentation.domain.ApiImplimentation;
 import com.example.ApiImplimentation.domain.DBpojo;
 import com.example.ApiImplimentation.services.DbApi;
+import com.example.ApiImplimentation.services.Fetch;
 import com.google.gson.Gson;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 @Path("/hwr")
@@ -24,6 +23,26 @@ public class HW {
         String J = g.toJson(APIIMP);
         return Response.ok(J).build();
     }
+//    @GET
+//    @Path("/fetch")
+//    public Response fet(@QueryParam("KeyPM") Integer keypm)
+//    {
+//        Fetch F = new Fetch();
+//        String S = F.senddata(keypm);
+//        return Response.ok(S).build();
+//    }
+
+    @GET
+    //@Path("/fetch")
+    @Path("/fetch/{xyz}")
+    public Response fet(@PathParam("xyz") Integer keypm)
+    {
+        Fetch F = new Fetch();
+        System.out.println(keypm);
+        String S = F.senddata(keypm);
+        return Response.ok(S).build();
+    }
+
     @POST
     @Path("/add")
     public Response HW(String PL)
