@@ -30,8 +30,11 @@ public class HW {
     {
         Gson g = new Gson();
         DBpojo J = g.fromJson(PL, DBpojo.class);
+        System.out.println(J);
         DbApi dbapi = new DbApi();
         dbapi.adddata(J);
+        System.out.println(dbapi);
+
         return Response.ok().build();
     }
 }

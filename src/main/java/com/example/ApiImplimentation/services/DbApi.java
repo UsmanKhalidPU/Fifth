@@ -11,8 +11,10 @@ import java.sql.Statement;
 public class DbApi {
     DBpojo DbP ;
     public void adddata(DBpojo j) {
+        Connection C = null;
+
         try {
-            Connection C = DriverManager.getConnection("jdbc:mysql://localhost:3306/hktemp", "root", "root");
+            C = DriverManager.getConnection("jdbc:mysql://localhost:3306/hktemp", "root", "root");
             Statement S = C.createStatement();
 
             Integer Hk_ID = j.getHk_ID();
@@ -29,7 +31,8 @@ public class DbApi {
             pst.setString(2, Location);
             pst.setInt(3, Hk_ID);
 
-            pst.executeUpdate();
+            Integer K = pst.executeUpdate();
+            System.out.println("No of record inserted: " + K);
         }
 
         catch (Exception e) {
