@@ -13,15 +13,16 @@ public class Fetch {
 
             Connection C =  DriverManager.getConnection("jdbc:mysql://localhost:3306/hktemp", "root", "root");
             Statement S = C.createStatement();
+            DBpojo P = new DBpojo();
 
-           String SQL = "select * from hoteldetails where HK_ID='"+K+"'";
+            String SQL = "select * from hoteldetails where HK_ID='"+K+"'";
 
             System.out.println(SQL);
             String HN =  new String();
             String HL =  new String();
             Integer I = null;
 
-            DBpojo P = new DBpojo();
+
             ResultSet rs = S.executeQuery(SQL);
 
             while (rs.next()) {

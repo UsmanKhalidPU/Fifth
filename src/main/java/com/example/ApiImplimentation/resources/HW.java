@@ -4,12 +4,10 @@ import com.example.ApiImplimentation.domain.ApiImplimentation;
 import com.example.ApiImplimentation.domain.DBpojo;
 import com.example.ApiImplimentation.services.DbApi;
 import com.example.ApiImplimentation.services.Fetch;
+import com.example.ApiImplimentation.services.forUpdate;
 import com.google.gson.Gson;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 @Path("/hwr")
@@ -21,7 +19,6 @@ public class HW {
     {
         ApiImplimentation APIIMP;
         APIIMP = new ApiImplimentation("Usman");
-
         Gson g = new Gson();
         String J = g.toJson(APIIMP);
         return Response.ok(J).build();
@@ -56,5 +53,16 @@ public class HW {
         System.out.println(dbapi);
 
         return Response.ok().build();
+    }
+
+    @PUT
+    @Path("/update/{xyz}")
+    public Response to_update(@PathParam("xyz") Integer S, String PL)
+    {
+        Gson g = new Gson();
+        DBpojo J = g.fromJson(PL, DBpojo.class);
+        forUpdate Fu = new forUpdate();
+        String K = Fu.updatedata(J, S);
+        return Response.ok(K).build();
     }
 }
