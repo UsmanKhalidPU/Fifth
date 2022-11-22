@@ -40,7 +40,7 @@ public class Fetch {
 
             Gson gson = new Gson();
             String json = gson.toJson(P);
-
+            System.out.println(json);
             return json;
         }
 

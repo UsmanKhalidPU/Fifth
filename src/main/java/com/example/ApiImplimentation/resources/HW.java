@@ -6,7 +6,10 @@ import com.example.ApiImplimentation.services.DbApi;
 import com.example.ApiImplimentation.services.Fetch;
 import com.google.gson.Gson;
 
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 @Path("/hwr")
@@ -33,12 +36,10 @@ public class HW {
 //    }
 
     @GET
-    //@Path("/fetch")
     @Path("/fetch/{xyz}")
     public Response fet(@PathParam("xyz") Integer keypm)
     {
         Fetch F = new Fetch();
-        System.out.println(keypm);
         String S = F.senddata(keypm);
         return Response.ok(S).build();
     }
