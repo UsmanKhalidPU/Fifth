@@ -16,33 +16,39 @@ public class Fetch {
             DBpojo P = new DBpojo();
 
             String SQL = "select * from hoteldetails where HK_ID='"+K+"'";
-
             System.out.println(SQL);
-            String HN =  new String();
-            String HL =  new String();
-            Integer I = null;
-
 
             ResultSet rs = S.executeQuery(SQL);
 
             if (rs.next()) {
-                HN = rs.getString("HotelName");
-                HL = rs.getString("Location");
-                I = rs.getInt ("HK_ID");
+                P.setHkName(rs.getString("HotelName"));
+                P.setHkLocation(rs.getString("Location"));
+                P.setHk_ID(rs.getInt("HK_ID"));
+
+                Gson gson = new Gson();
+                String json = gson.toJson(P);
+                System.out.println(json);
+                return json;
             }
 
-            //System.out.println("Record fetched: " + rs);
+            else {
+                return "Please check your logic>>>>>>>>>>";
+            }
 
-            //P.setHkName(rs.getString("HotelName"));
-            P.setHkName(HN);
-            P.setHkLocation(HL);
-            P.setHk_ID(Integer.valueOf(I));
-
-
-            Gson gson = new Gson();
-            String json = gson.toJson(P);
-            System.out.println(json);
-            return json;
+//            String HN =  new String();
+//            String HL =  new String();
+//            Integer I = null;
+//            ResultSet rs = S.executeQuery(SQL);
+//
+//            if (rs.next()) {
+//                HN = rs.getString("HotelName");
+//                HL = rs.getString("Location");
+//                I = rs.getInt ("HK_ID");
+//            }
+//
+//            P.setHkName(HN);
+//            P.setHkLocation(HL);
+//            P.setHk_ID(Integer.valueOf(I));
         }
 
         catch (Exception e) {

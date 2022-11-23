@@ -1,0 +1,13 @@
+com\example\ApiImplimentation\services\Fetch.class
+com\example\ApiImplimentation\services\forDelete.class
+com\example\ApiImplimentation\domain\DBpojo.class
+com\example\ApiImplimentation\services\SetImplimentation.class
+com\example\ApiImplimentation\services\HMImplimentation.class
+com\Application.class
+com\example\ApiImplimentation\services\ArrayListImplimentation.class
+com\example\ApiImplimentation\services\DBImplimentation.class
+com\example\ApiImplimentation\domain\ApiImplimentation.class
+com\example\ApiImplimentation\resources\HW.class
+com\example\ApiImplimentation\services\LLImplimentation.class
+com\example\ApiImplimentation\services\DbApi.class
+com\example\ApiImplimentation\services\forUpdate.class
