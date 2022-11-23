@@ -4,6 +4,7 @@ import com.example.ApiImplimentation.domain.ApiImplimentation;
 import com.example.ApiImplimentation.domain.DBpojo;
 import com.example.ApiImplimentation.services.DbApi;
 import com.example.ApiImplimentation.services.Fetch;
+import com.example.ApiImplimentation.services.forDelete;
 import com.example.ApiImplimentation.services.forUpdate;
 import com.google.gson.Gson;
 
@@ -63,6 +64,15 @@ public class HW {
         DBpojo J = g.fromJson(PL, DBpojo.class);
         forUpdate Fu = new forUpdate();
         String K = Fu.updatedata(J, S);
+        return Response.ok(K).build();
+    }
+
+    @DELETE
+    @Path("/delete/{xyz}")
+    public Response to_delete(@PathParam("xyz") Integer S)
+    {
+        forDelete Fu = new forDelete();
+        String K = Fu.deletedate(S);
         return Response.ok(K).build();
     }
 }

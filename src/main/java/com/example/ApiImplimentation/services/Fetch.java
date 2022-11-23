@@ -25,7 +25,7 @@ public class Fetch {
 
             ResultSet rs = S.executeQuery(SQL);
 
-            while (rs.next()) {
+            if (rs.next()) {
                 HN = rs.getString("HotelName");
                 HL = rs.getString("Location");
                 I = rs.getInt ("HK_ID");
